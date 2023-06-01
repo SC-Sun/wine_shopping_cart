@@ -16,7 +16,7 @@ const insertSeedData = async () => {
     process.exit();
   } catch (error) {
     console.error("Data Seeing ERROR!");
-    process.exit();
+    process.exit(1);
   }
 };
 
