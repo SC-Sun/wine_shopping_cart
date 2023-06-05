@@ -5,6 +5,8 @@
 }
 :root {
   --offWhite: #f4f4f4;
+  --mattBlack: #171717;
+  --mattRed: #b33f40;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
