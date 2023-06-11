@@ -14,7 +14,7 @@ export const getProducts = () => async (dispatch) => {
       type: actionTypes.GET_PRODUCT_DETAILS_FAIL,
       payload:
         error.response && error.response.data.message
-          ? error.response
+          ? error.message
           : error.response.data.message,
     });
   }
@@ -33,8 +33,8 @@ export const getProductDetails = (id) => async (dispatch) => {
       type: actionTypes.GET_PRODUCT_DETAILS_FAIL,
       payload:
         error.response && error.response.data.message
-          ? error.response
-          : error.response.data.message,
+          ? error.response.data.message
+          : error.message,
     });
   }
 };

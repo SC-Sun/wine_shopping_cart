@@ -12,6 +12,6 @@ const reducer = combineReducers({
   getProductDetails: getProductDetailsReducer,
 });
 
-const store = configureStore({ reducer: { reducer } });
+const store = configureStore({ reducer });
 
 export default store;
