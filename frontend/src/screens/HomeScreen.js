@@ -11,7 +11,7 @@ const HomeScreen = () => {
 
   useEffect(() => {
     dispatch(listProducts());
-  }, []);
+  }, [dispatch]);
   return (
     <div className="homescreen">
       <h2 className="homescreen_title"> Wine Products</h2>
