@@ -3,7 +3,7 @@ import * as actionTypes from "../constants/CartConstants";
 export const cartReducer = (state = { cartItems: [] }, action) => {
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
-      const item = action.paylaod;
+      const item = action.payload;
       const existItems = state.cartItems.find(
         (x) => x.product === item.product
       );
@@ -23,7 +23,7 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
     case actionTypes.REMOVE_TO_CART:
       return {
         ...state,
-        cartItems: state.cartItems.filter((x) => x.prodocut !== action.payload),
+        cartItems: state.cartItems.filter((x) => x.product !== action.payload),
       };
 
     default:
