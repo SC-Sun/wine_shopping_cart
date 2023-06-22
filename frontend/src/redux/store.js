@@ -14,9 +14,23 @@ const reducer = combineReducers({
   getProductDetails: getProductDetailsReducer,
 });
 
+const loadStore = () => {
+  if (localStorage.getItem("cart")) {
+    const local = JSON.parse(localStorage.getItem("cart"));
+    const INITIAL_STATE = {
+      cart: {
+        cartItems: local,
+      },
+    };
+    return INITIAL_STATE;
+  } else {
+    return [];
+  }
+};
+
 const middleware = [thunk];
 const applyM = applyMiddleware(middleware);
 
-const store = configureStore({ reducer, applyM });
+const store = configureStore({ reducer, applyM, preloadedState: loadStore() });
 
 export default store;
